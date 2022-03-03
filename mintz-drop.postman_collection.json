@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "c2cd88de-df9f-4ed2-8fab-a0bb493149c9",
+		"name": "mintz-drop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"samuelolubayo@gmail.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5005/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"samuelolubayo@gmail.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5005/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "423"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a7-wWYx/WDwDQAJREMhW4nMiRsNsjI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:47:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62200e46023d59df8761a75f\",\n    \"first_name\": \"Samuel\",\n    \"last_name\": \"Olubayo\",\n    \"email\": \"samuelolubayo@gmail.com\",\n    \"isAdmin\": false,\n    \"createdAt\": \"2022-03-03T00:39:34.761Z\",\n    \"updatedAt\": \"2022-03-03T00:39:34.761Z\",\n    \"__v\": 0,\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90\"\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"Samuel\",\n    \"last_name\":\"Olubayo\",\n    \"email\":\"samuelolubayo@gmail.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5005/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "```\nfirst_name: { type: String},\nlast_name: { type: String },\nemail: { type: String, required: true, unique: true },\npassword: { type: String, required: true },\nisAdmin: {type: Boolean, default: false},\n\n```"
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"Samuel\",\n    \"last_name\":\"Olubayo\",\n    \"email\":\"samuelolubayo@gmail.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5005/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-dnWEU1Vuzi/cgGRki8WInkaeZ/s\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:39:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Samuel\",\n    \"last_name\": \"Olubayo\",\n    \"email\": \"samuelolubayo@gmail.com\",\n    \"password\": \"U2FsdGVkX1+iv5xx1AJhLU4IswwmjUsYefbDkp6zkic=\",\n    \"isAdmin\": false,\n    \"_id\": \"62200e46023d59df8761a75f\",\n    \"createdAt\": \"2022-03-03T00:39:34.761Z\",\n    \"updatedAt\": \"2022-03-03T00:39:34.761Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "add post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU3YjNiNmZiNDNiZGQ1ZWVjMGVjOCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYxNjUwMzksImV4cCI6MTY0NjQyNDIzOX0.IASd9Bf8p_QoxiUCNFSK2NG0WJHtRhhy-6-yxNcw0HI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"my post 1\",\n    \"desc\": \"my post desccription 1\",\n    \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5005/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"posts"
+							]
+						},
+						"description": "```\ntitle: { type: String, required: true, unique: true },\ndesc: { type: String },\nimg: { type: String, required: true },\n\n```"
+					},
+					"response": [
+						{
+							"name": "add post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU3YjNiNmZiNDNiZGQ1ZWVjMGVjOCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYxNjUwMzksImV4cCI6MTY0NjQyNDIzOX0.IASd9Bf8p_QoxiUCNFSK2NG0WJHtRhhy-6-yxNcw0HI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"my post\",\n    \"desc\": \"my post desccription\",\n    \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n    \"user_id\": 2 \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5005/api/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-Ocf5fYyQ+5QLaVHNX5iBamLSxJU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:48:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"abiola post\",\n    \"desc\": \"abiola post desccription\",\n    \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n    \"_id\": \"622010442d5aa41b7cd50d7b\",\n    \"createdAt\": \"2022-03-03T00:48:04.978Z\",\n    \"updatedAt\": \"2022-03-03T00:48:04.978Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5005/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5005/api/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"491-7W3SrqSfij8MY//rM36J//QplAk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:51:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"62200a7cccdfccc73f922b6c\",\n        \"title\": \"abiola post\",\n        \"desc\": \"abiola post desccription\",\n        \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n        \"createdAt\": \"2022-03-03T00:23:24.269Z\",\n        \"updatedAt\": \"2022-03-03T00:23:24.269Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"622010442d5aa41b7cd50d7b\",\n        \"title\": \"abiola post\",\n        \"desc\": \"abiola post desccription\",\n        \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n        \"createdAt\": \"2022-03-03T00:48:04.978Z\",\n        \"updatedAt\": \"2022-03-03T00:48:04.978Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"622010e42d5aa41b7cd50d7e\",\n        \"title\": \"my post\",\n        \"desc\": \"my post desccription\",\n        \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n        \"createdAt\": \"2022-03-03T00:50:44.731Z\",\n        \"updatedAt\": \"2022-03-03T00:50:44.731Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"622011002d5aa41b7cd50d80\",\n        \"title\": \"my post 1\",\n        \"desc\": \"my post desccription 1\",\n        \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n        \"createdAt\": \"2022-03-03T00:51:12.255Z\",\n        \"updatedAt\": \"2022-03-03T00:51:12.255Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get single post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5005/api/posts/62200a7cccdfccc73f922b6c",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"posts",
+								"62200a7cccdfccc73f922b6c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get single post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5005/api/posts/62200a7cccdfccc73f922b6c",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"posts",
+										"62200a7cccdfccc73f922b6c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-FXIM/ePGaZKO4ETafN70cYp3d+M\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:52:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62200a7cccdfccc73f922b6c\",\n    \"title\": \"abiola post\",\n    \"desc\": \"abiola post desccription\",\n    \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n    \"createdAt\": \"2022-03-03T00:23:24.269Z\",\n    \"updatedAt\": \"2022-03-03T00:23:24.269Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5005/api/posts/62200a7cccdfccc73f922b6c",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"posts",
+								"62200a7cccdfccc73f922b6c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5005/api/posts/62200a7cccdfccc73f922b6c",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"posts",
+										"62200a7cccdfccc73f922b6c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-H9JZpDmoJVSjRTbqeMTO38tDsQE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:54:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Post has been deleted...\""
+						}
+					]
+				},
+				{
+					"name": "edit post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Samuel Post\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5005/api/posts/622010442d5aa41b7cd50d7b",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"posts",
+								"622010442d5aa41b7cd50d7b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit post",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjAwZTQ2MDIzZDU5ZGY4NzYxYTc1ZiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDYyNjg0NDMsImV4cCI6MTY0NjUyNzY0M30.S2Fz0tlg6b2ofwvcuvBGlUok5QLcqXRD_jvN3L3uN90",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Samuel Post\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5005/api/posts/622010442d5aa41b7cd50d7b",
+									"host": [
+										"localhost"
+									],
+									"port": "5005",
+									"path": [
+										"api",
+										"posts",
+										"622010442d5aa41b7cd50d7b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-OvZVsjK6Vx7F6ro9LiafHZc60cA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Mar 2022 00:56:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"622010442d5aa41b7cd50d7b\",\n    \"title\": \"Samuel Post\",\n    \"desc\": \"abiola post desccription\",\n    \"img\": \"https://images.pexels.com/photos/363766/pexels-photo-363766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\",\n    \"createdAt\": \"2022-03-03T00:48:04.978Z\",\n    \"updatedAt\": \"2022-03-03T00:56:29.739Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
